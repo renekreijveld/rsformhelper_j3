@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_rsformhelper</name>
+    <creationDate>2014-06-01</creationDate>
+    <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>René Kreijveld</author>
+    <authorEmail>email@renekreijveld.nl</authorEmail>
+    <authorUrl>http://about.me/renekreijveld</authorUrl>
+    <version>1.0.2</version>
+    <description>Simple tool that generates code for the e-mail and scripts parts of a RSForm!Pro form. Written by René Kreijveld.</description>
+    <administration>
+        <menu img="components/com_rsformhelper/assets/images/s_com_rsformhelper.png" >COM_RSFORMHELPER</menu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>rsformhelper.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>language</folder>
+        </files>
+        <languages folder="administrator">
+			<language tag="en-GB">language/en-GB/en-GB.com_rsformhelper.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_rsformhelper.sys.ini</language>
+        </languages>
+    </administration>
+    <updateservers>
+        <server type="extension" priority="1" name="RSForm! Helper">http://www.rkrweb.nl/update/com_rsformhelper/extension.xml</server>
+    </updateservers>    
+</extension>
