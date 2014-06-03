@@ -7,7 +7,7 @@
     <author>René Kreijveld</author>
     <authorEmail>email@renekreijveld.nl</authorEmail>
     <authorUrl>http://about.me/renekreijveld</authorUrl>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <description>Simple tool that generates code for the e-mail and scripts parts of a RSForm!Pro form. Written by René Kreijveld.</description>
     <administration>
         <menu img="components/com_rsformhelper/assets/images/s_com_rsformhelper.png" >COM_RSFORMHELPER</menu>

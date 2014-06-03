@@ -1,6 +1,6 @@
 <?php
 /**
- * @version     1.0.2
+ * @version     1.0.3
  * @package     com_rsformhelper
  * @copyright   Copyright (C) 2014. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -16,7 +16,7 @@ JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', 'select');
 
 // Version
-$version = "1.0.2";
+$version = "1.0.3";
 
 // Import CSS
 $document = JFactory::getDocument();
@@ -195,6 +195,7 @@ if ($tdstylev!='') $tdstylev = " style=\"$tdstylev\"";
 		<p>RSForm! Helper also generaties PHP code that can be usefull in the PHP Scripts of your form.</p>
 		<p>RSForm! Helper was written by René Kreijveld and is provided free of charge, without warranties. Questions, remarks, improvements? Feel free to <a target="_blank" href="http://about.me/renekreijveld">contact me</a>.</p>
 		<p>Version: <?php echo $version;?></p>
+		<p>RSForm! Helper on github: <a target="_blank" href="https://github.com/renekreijveld/rsformhelper_j3">https://github.com/renekreijveld/rsformhelper_j3</a></p>
 		<?php }?>
 	</div>
 </form>
