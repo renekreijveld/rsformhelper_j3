@@ -163,7 +163,7 @@ if ($tdstylev!='') $tdstylev = " style=\"$tdstylev\"";
 		</div>
 		<div class="control-group tdcsscaption">
 			<label class="control-label">
-				<a class="hasTooltip nolink" title="CSS code to be applied to the column that displays the form field <em>caption</em>." data-toggle="tooltip" href="#">TD css caption <span class="icon-info"></span></a><br/>
+				<a class="hasTooltip nolink" title="CSS code to be applied to the column that displays the form field <em>caption</em>." data-toggle="tooltip" href="#">TD/DIV css caption <span class="icon-info"></span></a><br/>
 			</label>
 			<div class="controls">
 				<input name="tdstylec" type="text" id="tdstylec" class="input-xlarge" value=""><br/>
@@ -172,16 +172,17 @@ if ($tdstylev!='') $tdstylev = " style=\"$tdstylev\"";
 		</div>
 		<div class="control-group">
 			<label class="control-label">
-				<a class="hasTooltip nolink" title="CSS code to be applied to the column that displays the form field <em>value</em>." data-toggle="tooltip" href="#">TD css value <span class="icon-info"></span></a><br/>
+				<a class="hasTooltip nolink" title="CSS code to be applied to the column that displays the form field <em>value</em> for e-mail and <em>body</em> for form-layout." data-toggle="tooltip" href="#">TD/DIV css value <span class="icon-info"></span></a><br/>
 			</label>
 			<div class="controls">
 				<input name="tdstylev" type="text" id="tdstylev" class="input-xlarge" value=""><br/>
 				<em>Example:</em> <strong>width:400px;font-size:12px;</strong>
+
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label">
-				<a class="hasTooltip nolink" title="CSS code to be applied to the whole table." data-toggle="tooltip" href="#">Full table CSS <span class="icon-info"></span></a><br/>
+				<a class="hasTooltip nolink" title="CSS code to be applied to the whole table for e-mail or container div for form-layout" data-toggle="tooltip" href="#">Full table / Container Div CSS <span class="icon-info"></span></a><br/>
 			</label>
 			<div class="controls">
 				<input name="tablecss" type="text" class="input-xlarge" id="tablecss" value=""><br/>
