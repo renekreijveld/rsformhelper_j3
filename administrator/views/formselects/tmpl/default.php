@@ -62,6 +62,20 @@ if ($tdstylev!='') $tdstylev = " style=\"$tdstylev\"";
 			echo htmlspecialchars('  </tbody>').'<br/>'.htmlspecialchars('</table>').'<br/>';
 			echo '</pre>';
 			?>
+			<h3>Div Layout HTML :</h3>
+			<?php
+			echo '<pre class="prettyprint lang-html" style="padding:10px;">';
+			foreach ($this->items as $i => $item) :
+				echo htmlspecialchars('   ');
+				echo htmlspecialchars('<div '.$tablecss.'>').'<br/>';
+				echo htmlspecialchars('     ');
+				echo htmlspecialchars('<div'.$tdstylec.'>{'.$item->PropertyValue.':caption}<br />{'.$item->PropertyValue.':validation}</div>').'<br/>';
+				echo htmlspecialchars('     ');
+				echo htmlspecialchars('<div'.$tdstylev.'>{'.$item->PropertyValue.':body}</div>').'<br/>';
+				echo htmlspecialchars('   ');
+				echo htmlspecialchars('</div>').'<br/>';
+			endforeach;
+			echo '</pre>';
 			<h3>PHP code to add data to a database:</h3>
 			<?php
 			echo '<pre class="prettyprint lang-php" style="padding:10px;">';
