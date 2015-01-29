@@ -34,6 +34,12 @@ $tdstylec = $input->post->get('tdstylec','','HTML');
 if ($tdstylec!='') $tdstylec = " style=\"$tdstylec\"";
 $tdstylev = $input->post->get('tdstylev','','HTML');
 if ($tdstylev!='') $tdstylev = " style=\"$tdstylev\"";
+$containerdiv = $input->post->get('containerdiv','','HTML');
+if ($containerdiv!='') $containerdiv = " class=\"$containerdiv\"";
+$captiondiv = $input->post->get('captiondiv','','HTML');
+if ($captiondiv!='') $captiondiv = " class=\"$captiondiv\"";
+$bodydiv = $input->post->get('bodydiv','','HTML');
+if ($bodydiv!='') $bodydiv = " class=\"$bodydiv\"";
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_rsformhelper&view=formselects'); ?>" method="post" name="adminForm" id="adminForm" class="form-horizontal">
 	<div id="j-sidebar-container" class="span2">
@@ -60,6 +66,21 @@ if ($tdstylev!='') $tdstylev = " style=\"$tdstylev\"";
 				echo htmlspecialchars('</tr>').'<br/>';
 			endforeach;
 			echo htmlspecialchars('  </tbody>').'<br/>'.htmlspecialchars('</table>').'<br/>';
+			echo '</pre>';
+			?>
+			<h3>Foundation Layout fields:</h3>
+			<?php
+			echo '<pre class="prettyprint lang-html" style="padding:10px;">';
+			foreach ($this->items as $i => $item) :
+				echo htmlspecialchars('   ');
+				echo htmlspecialchars('<div'.$containerdiv.'>').'<br/>';
+				echo htmlspecialchars('     ');
+				echo htmlspecialchars('<div'.$captiondiv.'>{'.$item->PropertyValue.':caption}<br />{'.$item->PropertyValue.':validation}</div>').'<br/>';
+				echo htmlspecialchars('     ');
+				echo htmlspecialchars('<div'.$bodydiv.'>{'.$item->PropertyValue.':body}</div>').'<br/>';
+				echo htmlspecialchars('   ');
+				echo htmlspecialchars('</div>').'<br/>';
+			endforeach;
 			echo '</pre>';
 			?>
 			<h3>PHP code to add data to a database:</h3>
@@ -147,7 +168,7 @@ if ($tdstylev!='') $tdstylev = " style=\"$tdstylev\"";
 				</select>
 			</div>
 		</div>
-		<div class="control-group tdcsscaption">
+		<div class="control-group">
 			<label class="control-label">
 				<a class="hasTooltip nolink" title="CSS code to be applied to the column that displays the form field <em>caption</em>." data-toggle="tooltip" href="#">TD css caption <span class="icon-info"></span></a><br/>
 			</label>
@@ -174,6 +195,35 @@ if ($tdstylev!='') $tdstylev = " style=\"$tdstylev\"";
 				<em>Example:</em> <strong>width:600px;border-collapse:collapse;</strong>
 			</div>
 		</div>
+<div class="control-group">
+			<label class="control-label">
+				<a class="hasTooltip nolink" title="CSS code to be applied to the container DIV." data-toggle="tooltip" href="#">DIV Class for containerdiv <span class="icon-info"></span></a><br/>
+			</label>
+			<div class="controls">
+				<input name="containerdiv" type="text" class="input-xlarge" id="containerdiv" value=""><br/>
+				<em>Example:</em> <strong>row</strong>
+			</div>
+		</div>
+<div class="control-group">
+			<label class="control-label">
+				<a class="hasTooltip nolink" title="Class to be applied to the column that displays the field <em>caption</em>." data-toggle="tooltip" href="#">DIV Class for caption <span class="icon-info"></span></a><br/>
+			</label>
+			<div class="controls">
+				<input name="captiondiv" type="text" id="captiondiv" class="input-xlarge" value=""><br/>
+				<em>Example:</em> <strong>small-12 medium-4 large-5 columns</strong>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">
+				<a class="hasTooltip nolink" title="Class to be applied to the column that displays the <em>body</em> for this field." data-toggle="tooltip" href="#">DIV Class for body <span class="icon-info"></span></a><br/>
+			</label>
+			<div class="controls">
+				<input name="bodydiv" type="text" id="bodydiv" class="input-xlarge" value=""><br/>
+				<em>Example:</em> <strong>small-12 medium-8 large-7 columns</strong>
+			</div>
+		</div>
+		
+
 		<div class="control-group">
 			<div class="controls">
 				<button type="submit" class="btn btn-success">Generate code</button>
