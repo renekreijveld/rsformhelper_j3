@@ -109,6 +109,8 @@ class RsformhelperModelFormselects extends JModelList {
 
 
 	public function getItems() {
+		// No limit, otherwise we only get the number of items set for pagination
+		$this->setState('list.limit', 0);
 		$items = parent::getItems();
 		
 		return $items;
